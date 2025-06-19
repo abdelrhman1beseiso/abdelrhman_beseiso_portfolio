@@ -1,0 +1,73 @@
+# Python #
+*.pyc
+__pycache__
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Django #
+*.log
+local_settings.py
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+ENV.bak/
+
+# Virtual Environment files
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Static and media files (if you use collectstatic, not needed in repo)
+/static/
+/media/
+
+# dotenv
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+unit_tests.xml
+
+# Docs
+docs/_build/
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-error.log
+/.nuxt/
+/dist/
