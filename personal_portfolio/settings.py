@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings (for development only - change for production!)
 SECRET_KEY = 'rc529@xt^_a4nl1j0y05btpr_3b+t7lla#a8xryms46phdgi#6'
 DEBUG = False
-ALLOWED_HOSTS = ['abdelrhmanbeseiso.pythonanywhere.com']
+ALLOWED_HOSTS = ['abdelrhmanbeseiso.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
