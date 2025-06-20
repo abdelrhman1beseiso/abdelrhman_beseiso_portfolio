@@ -62,11 +62,13 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'abdelrhmanbeseiso$default',
+        'USER': 'abdelrhmanbeseiso',
+        'PASSWORD': 'Abood_$2288',  
+        'HOST': 'abdelrhmanbeseiso.mysql.pythonanywhere-services.com',
     }
 }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
