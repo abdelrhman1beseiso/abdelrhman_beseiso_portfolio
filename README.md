@@ -25,7 +25,7 @@ The contact form sends emails through a secure backend service, ensuring user pr
 - **Python**
 - **Django**
 - HTML5 / CSS3 / JavaScript (Vanilla)
-- SMTP (for sending emails securely)
+- resend service https://resend.com (for sending emails securely)
 - Environment Variables for sensitive data
 - Optional: TailwindCSS or Bootstrap for styling
 
