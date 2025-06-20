@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abdelrhman Beseiso - Backend Developer specializing in Django, Laravel, and PostgreSQL">
     <title>Abdelrhman Beseiso - Backend Developer</title>
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #4e54c8;
@@ -101,9 +108,9 @@
         }
 
         .tech-icons {
-        position: relative;
-        width: 100%;
-        height: 300px; 
+            position: relative;
+            width: 100%;
+            height: 300px; 
         }
 
         .icon-float {
@@ -112,33 +119,37 @@
             color: white;
             opacity: 0.8;
             animation: float 6s ease-in-out infinite;
-            }
-            .icon-float:nth-child(1) { /* Python */
+        }
+        
+        .icon-float:nth-child(1) {
             top: 20%;
             left: 30%;
             animation-delay: 0s;
-            }
-            .icon-float:nth-child(2) { /* Java */
+        }
+        
+        .icon-float:nth-child(2) {
             top: 40%;
             left: 60%;
             animation-delay: 0.5s;
-            }
-            .icon-float:nth-child(3) { /* Database */
+        }
+        
+        .icon-float:nth-child(3) {
             top: 70%;
             left: 40%;
             animation-delay: 1s;
-            }
-            .icon-float:nth-child(4) { /* HTML5 */
+        }
+        
+        .icon-float:nth-child(4) {
             top: 30%;
             left: 70%;
             animation-delay: 1.5s;
-            }
+        }
+        
         @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(5deg); }
             100% { transform: translateY(0) rotate(0deg); }
         }
-        
 
         .btn-hover-transform {
             transition: all 0.3s ease;
@@ -151,7 +162,6 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Skills Cards */
         .skill-card {
             border: none;
             border-radius: 15px;
@@ -182,10 +192,11 @@
             border-radius: 5px;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
         }
+
         .stats-section p {
-    color: white !important;
-}
-        /* Stats Section */
+            color: white !important;
+        }
+
         .stats-section {
             background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
             position: relative;
@@ -199,32 +210,25 @@
             color: white;
         }
 
-        /* Projects Section */
-        
-        
-        .social-platforms {
-            position: relative;
-        }
-        
         .card, .project-selector, .platform-option {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-}
-        
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
         .platform-option:hover {
             transform: translateY(-5px);
         }
-        
+
         .platform-option.active {
             background: linear-gradient(45deg, rgba(78, 84, 200, 0.1), rgba(143, 148, 251, 0.1));
             box-shadow: 0 5px 15px rgba(78, 84, 200, 0.2);
         }
-        
+
         .platform-icon {
             color: var(--primary-color);
             transition: all 0.3s ease;
         }
-        
+
         .platform-option.active .platform-icon {
             color: white;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
@@ -236,71 +240,37 @@
             justify-content: center;
             margin: 0 auto;
         }
-        
-        .platform-divider {
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             position: relative;
-        }
-        
-        .or-circle {
-            background: var(--card-bg);
-            color: var(--primary-color);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            box-shadow: 0 0 0 5px rgba(78, 84, 200, 0.1);
-        }
-        
-        .platform-cta {
-            opacity: 0;
-        }
-        
-        .platform-cta.show {
-            opacity: 1;
+            overflow: hidden;
         }
 
-        /* Contact Section */
-       .contact-section {
-       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-       position: relative;
-       overflow: hidden;
-    }
-    .card {
-    background: var(--card-bg);
-    color: var(--text-color);
-}
-[data-theme="dark"] .form-floating label {
-    color: #ced4da; /* Lighter gray for dark theme */
-}
+        .form-floating label {
+            color: var(--text-color);
+        }
 
-     .form-floating label {
-    color: var(--text-color);
-}
-
-[data-theme="dark"] .form-floating label {
-    color: #ced4da; /* Lighter gray for dark theme */
-}
+        [data-theme="dark"] .form-floating label {
+            color: #ced4da;
+        }
 
         .form-control {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-color: var(--text-color);
-}
-[data-theme="dark"] .form-control {
-    border-color: #495057; /* Darker border */
-    background-color: #1a1a2e; /* Darker than --dark-color for contrast */
-}
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-color: var(--text-color);
+        }
 
+        [data-theme="dark"] .form-control {
+            border-color: #495057;
+            background-color: #1a1a2e;
+        }
 
         .form-control:focus {
             border-color: var(--primary-color);
             box-shadow: 0 0 0 0.25rem rgba(78, 84, 200, 0.25);
         }
 
-        /* Floating Contact Button */
         .floating-contact-btn {
             position: fixed;
             bottom: 30px;
@@ -323,63 +293,7 @@
         .floating-contact-btn:hover {
             transform: scale(1.1) rotate(15deg);
         }
-        .form-floating>.form-control:not(:placeholder-shown)~label,
-.form-floating>.form-control:focus~label {
-    color: #6c757d; /* Light theme */
-}
 
-[data-theme="dark"] .form-floating>.form-control:not(:placeholder-shown)~label,
-[data-theme="dark"] .form-floating>.form-control:focus~label {
-    color: #adb5bd; /* Dark theme */
-}
-
-/* Placeholder text */
-.form-control::placeholder {
-    color: var(--text-color);
-    opacity: 0.7;
-}
-
-[data-theme="dark"] .form-control::placeholder {
-    color: #adb5bd; /* Dark theme */
-}
-
-/* Force white text for specific elements */
-.contact-section h2,
-.contact-section .text-white {
-    color: white !important;
-}
-
-/* Text in cards */
-.card-body {
-    color: var(--text-color);
-}
-
-/* Progress bar labels */
-.text-muted {
-    color: var(--text-color) !important;
-    opacity: 0.7;
-}
-
-        /* Modal */
-        .modal-content {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            background: var(--card-bg);
-        }
-
-        .modal-header {
-            border-bottom: none;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: white;
-        }
-
-        .close {
-            color: white;
-            opacity: 1;
-        }
-
-        /* Notification */
         .notification {
             position: fixed;
             top: 20px;
@@ -397,29 +311,20 @@
         .notification.show {
             transform: translateX(0);
         }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-        }
     </style>
 </head>
 <body>
-    <!-- Theme Switcher -->
     <div class="theme-switcher">
-        <button class="theme-toggle" id="themeToggle">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
             <i class="fas fa-moon"></i>
         </button>
     </div>
 
-    <!-- Floating Contact Button -->
-    <div class="floating-contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    <div class="floating-contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal" aria-label="Contact me">
         <i class="fas fa-envelope"></i>
     </div>
 
     <main>
-        <!-- Hero Section with Particle Background -->
         <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
             <div id="particles-js" class="position-absolute w-100 h-100"></div>
             <div class="container position-relative">
@@ -429,17 +334,11 @@
                         <h2 class="text-white mb-4 typewriter">I'm a <span class="typed"></span></h2>
                         <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-2s">Backend developer specializing in Django, Laravel, and PostgreSQL with a passion for building efficient, scalable web applications.</p>
                         <div class="social-links mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-                            <a href="https://github.com/abdelrhman1beseiso" class="btn btn-outline-light btn-lg me-2 btn-hover-transform">
+                            <a href="https://github.com/abdelrhman1beseiso" class="btn btn-outline-light btn-lg me-2 btn-hover-transform" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="https://www.linkedin.com/in/abdelrhman-beseiso-93363b282/" class="btn btn-outline-light btn-lg me-2 btn-hover-transform">
+                            <a href="https://www.linkedin.com/in/abdelrhman-beseiso-93363b282/" class="btn btn-outline-light btn-lg me-2 btn-hover-transform" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
-                            <a href="https://wa.me/+972595327448" class="btn btn-outline-light btn-lg me-2 btn-hover-transform">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </a>
-                            <a href="https://www.instagram.com/abdelrhman_besiso/" class="btn btn-outline-light btn-lg btn-hover-transform">
-                                <i class="fab fa-instagram"></i> Instagram
                             </a>
                         </div>
                     </div>
@@ -457,7 +356,6 @@
             </div>
         </section>
 
-        <!-- Skills Section with Animated Progress Bars -->
         <section class="skills-section py-5">
             <div class="container">
                 <h2 class="text-center mb-5 animate__animated animate__fadeInUp">My <span class="text-gradient">Skills</span></h2>
@@ -517,7 +415,6 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section class="projects-section py-5">
             <div class="container">
                 <h2 class="text-center mb-5 animate__animated animate__fadeInUp">My <span class="text-gradient">Projects</span></h2>
@@ -547,9 +444,10 @@
                             </div>
                             
                             <div class="platform-cta mt-5 animate__animated animate__fadeIn animate__delay-1s">
-                                <a href="https://github.com/abdelrhman1beseiso" id="platformLink" class="btn btn-primary btn-lg px-5 btn-hover-transform">
+                                <a href="https://github.com/abdelrhman1beseiso" id="platformLink" class="btn btn-primary btn-lg px-5 btn-hover-transform" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-github me-2"></i> Visit My GitHub
                                 </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -557,16 +455,15 @@
             </div>
         </section>
 
-        <!-- Animated Stats Section -->
         <section class="stats-section py-5 text-white">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-3 mb-4 mb-md-0 animate__animated animate__fadeInUp">
-                        <div class="counter" data-target="+10">0</div>
+                        <div class="counter" data-target="10">0</div>
                         <p class="mb-0">Projects Completed</p>
                     </div>
                     <div class="col-md-3 mb-4 mb-md-0 animate__animated animate__fadeInUp animate__delay-1s">
-                        <div class="counter" data-target="+25">0</div>
+                        <div class="counter" data-target="25">0</div>
                         <p class="mb-0">Happy Clients</p>
                     </div>
                     <div class="col-md-3 mb-4 mb-md-0 animate__animated animate__fadeInUp animate__delay-2s">
@@ -574,83 +471,84 @@
                         <p class="mb-0">Years Experience</p>
                     </div>
                     <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-3s">
-                        <div class="counter" data-target="+1000">0</div>
+                        <div class="counter" data-target="1000">0</div>
                         <p class="mb-0">Cups of Coffee</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-       <section id="contact" class="contact-section py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow-lg animate__animated animate__zoomIn">
-                    <div class="card-body p-5">
-                        <h2 class="text-center mb-4">Get In Touch</h2> 
-                        <div class="text-center mb-4">
-                            <button class="btn btn-primary btn-lg px-5 btn-hover-transform" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                <i class="fas fa-envelope me-2"></i> Mail Me
-                            </button>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-center mb-4">Or connect with me on social media</p>
-                            <div class="social-links">
-                                <a href="https://github.com/abdelrhman1beseiso" class="btn btn-outline-primary btn-lg me-2 btn-hover-transform">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/abdelrhman-beseiso-93363b282/" class="btn btn-outline-primary btn-lg me-2 btn-hover-transform">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me/+972595327448" class="btn btn-outline-primary btn-lg me-2 btn-hover-transform">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                                <a href="https://www.instagram.com/abdelrhman_besiso/" class="btn btn-outline-primary btn-lg btn-hover-transform">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
+        <section id="contact" class="contact-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow-lg animate__animated animate__zoomIn">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-4">Get In Touch</h2> 
+                                <div class="text-center mb-4">
+                                    <button class="btn btn-primary btn-lg px-5 btn-hover-transform" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                        <i class="fas fa-envelope me-2"></i> Mail Me
+                                    </button>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-center mb-4">Or connect with me on social media</p>
+                                    <div class="social-links">
+                                        <a href="https://github.com/abdelrhman1beseiso" class="btn btn-outline-primary btn-lg me-2 btn-hover-transform" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/abdelrhman-beseiso-93363b282/" class="btn btn-outline-primary btn-lg me-2 btn-hover-transform" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
     
-    <!-- Contact Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Send Me a Message</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="contactForm" class="needs-validation" novalidate>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                            <label for="name">Your Name</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
-                            <label for="email">Email Address</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px" required></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg px-5 btn-hover-transform">
-                                Send Message <i class="fas fa-paper-plane ms-2"></i>
-                            </button>
-                        </div>
-                    </form>
+ <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Send Me a Message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            {% csrf_token %}
+                            
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                <label for="name">Your Name</label>
+                                <div class="invalid-feedback">Please provide your name.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                <label for="email">Email Address</label>
+                                <div class="invalid-feedback">Please provide a valid email.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" name="message" placeholder="Your Message" style="height: 150px" required></textarea>
+                                <label for="message">Your Message</label>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <div id="formResponse" class="mb-3 d-none"></div>
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 btn-hover-transform" id="submitButton">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                    <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
 
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
@@ -658,56 +556,56 @@
         </div>
     </footer>
 
-    <!-- Notification -->
     <div class="notification" id="notification">
         Message sent successfully!
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
         // Theme Switcher
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Check for saved theme preference
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', currentTheme);
-        
-        // Update button icon based on theme
-        if (currentTheme === 'dark') {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            if (body.getAttribute('data-theme') === 'light') {
-                body.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            } else {
-                body.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            }
-        });
-
-        // Typed.js Animation
         document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            
+            // Check for saved theme preference
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            body.setAttribute('data-theme', currentTheme);
+            
+            // Update button icon based on theme
+            if (currentTheme === 'dark') {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            }
+            
+            themeToggle.addEventListener('click', () => {
+                if (body.getAttribute('data-theme') === 'light') {
+                    body.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+                } else {
+                    body.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+                }
+            });
+
+            // Typed.js Animation
             var typed = new Typed('.typed', {
                 strings: ["Backend Developer", "Django Expert", "Java Developer", "PostgreSQL Specialist"],
                 typeSpeed: 50,
                 backSpeed: 30,
                 loop: true
             });
-        });
 
-        // Counter Animation
-        document.addEventListener('DOMContentLoaded', function() {
+            // Counter Animation
             const counters = document.querySelectorAll('.counter');
             const speed = 200;
             
@@ -733,10 +631,8 @@
                     }
                 }
             });
-        });
 
-        // Particles.js
-        document.addEventListener('DOMContentLoaded', function() {
+            // Particles.js
             if (document.getElementById('particles-js')) {
                 particlesJS('particles-js', {
                     "particles": {
@@ -755,30 +651,15 @@
                             "stroke": {
                                 "width": 0,
                                 "color": "#000000"
-                            },
-                            "polygon": {
-                                "nb_sides": 5
                             }
                         },
                         "opacity": {
                             "value": 0.5,
-                            "random": false,
-                            "anim": {
-                                "enable": false,
-                                "speed": 1,
-                                "opacity_min": 0.1,
-                                "sync": false
-                            }
+                            "random": false
                         },
                         "size": {
                             "value": 3,
-                            "random": true,
-                            "anim": {
-                                "enable": false,
-                                "speed": 40,
-                                "size_min": 0.1,
-                                "sync": false
-                            }
+                            "random": true
                         },
                         "line_linked": {
                             "enable": true,
@@ -794,12 +675,7 @@
                             "random": false,
                             "straight": false,
                             "out_mode": "out",
-                            "bounce": false,
-                            "attract": {
-                                "enable": false,
-                                "rotateX": 600,
-                                "rotateY": 1200
-                            }
+                            "bounce": false
                         }
                     },
                     "interactivity": {
@@ -822,71 +698,29 @@
                                     "opacity": 1
                                 }
                             },
-                            "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
-                                "speed": 3
-                            },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
-                            },
                             "push": {
                                 "particles_nb": 4
-                            },
-                            "remove": {
-                                "particles_nb": 2
                             }
                         }
                     },
                     "retina_detect": true
                 });
             }
-        });
 
-        // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simulate form submission
-            setTimeout(() => {
-                // Show notification
-                const notification = document.getElementById('notification');
-                notification.classList.add('show');
-                
-                // Hide after 3 seconds
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 3000);
-                
-                // Reset form and close modal
-                this.reset();
-                bootstrap.Modal.getInstance(document.getElementById('contactModal')).hide();
-            }, 1000);
-        });
-
-        // Platform selector
-        document.addEventListener('DOMContentLoaded', function() {
+            // Platform selector
             const platformOptions = document.querySelectorAll('.platform-option');
             const platformLink = document.getElementById('platformLink');
             const platformCta = document.querySelector('.platform-cta');
             
-            // Show CTA after animation
             setTimeout(() => {
                 platformCta.classList.add('show');
             }, 1000);
             
             platformOptions.forEach(option => {
                 option.addEventListener('click', function() {
-                    // Remove active class from all options
                     platformOptions.forEach(opt => opt.classList.remove('active'));
-                    
-                    // Add active class to clicked option
                     this.classList.add('active');
                     
-                    // Update the link based on selection
                     const platform = this.getAttribute('data-platform');
                     if (platform === 'github') {
                         platformLink.href = 'https://github.com/abdelrhman1beseiso';
@@ -896,17 +730,90 @@
                         platformLink.innerHTML = '<i class="fab fa-linkedin me-2"></i> Visit My LinkedIn';
                     }
                     
-                    // Add bounce animation
                     this.classList.add('animate__animated', 'animate__bounce');
                     setTimeout(() => {
                         this.classList.remove('animate__animated', 'animate__bounce');
                     }, 1000);
                 });
             });
-        });
 
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formResponse = document.getElementById('formResponse');
+    const submitButton = document.getElementById('submitButton');
+    const btnText = submitButton.querySelector('.btn-text');
+    const spinner = submitButton.querySelector('.spinner-border');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!contactForm.checkValidity()) {
+            e.stopPropagation();
+            contactForm.classList.add('was-validated');
+            return;
+        }
+        
+        btnText.classList.add('d-none');
+        spinner.classList.remove('d-none');
+        submitButton.disabled = true;
+        
+        const formData = new FormData(contactForm);
+        
+        fetch('/send-message/', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+                // ADD THIS LINE: Explicitly set X-Requested-With header
+                'X-Requested-With': 'XMLHttpRequest' 
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            formResponse.classList.remove('d-none');
+            if (data.status === 'success') {
+                formResponse.innerHTML = `
+                    <div class="alert alert-success">
+                        ${data.message}
+                    </div>
+                `;
+                contactForm.reset();
+                contactForm.classList.remove('was-validated');
+                setTimeout(() => {
+                    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                    if (modalInstance) {
+                        modalInstance.hide();
+                    }
+                }, 3000);
+            } else {
+                formResponse.innerHTML = `
+                    <div class="alert alert-danger">
+                        ${data.message}
+                    </div>
+                `;
+            }
+        })
+        .catch(error => {
+            formResponse.classList.remove('d-none');
+            formResponse.innerHTML = `
+                <div class="alert alert-danger">
+                    An error occurred. Please try again later.
+                </div>
+            `;
+            console.error('Fetch error:', error);
+        })
+        .finally(() => {
+            btnText.classList.remove('d-none');
+            spinner.classList.add('d-none');
+            submitButton.disabled = false;
+        });
+    });
+});
+</script>
 </body>
 </html>
