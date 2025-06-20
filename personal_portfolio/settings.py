@@ -9,7 +9,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security settings (for development only - change for production!)
-SECRET_KEY = 'django-insecure-h!8*=6i2t@b2l9@ekyj7^ow)j0yri@!o@0zwxgk8!566&sm)fz'
+SECRET_KEY = 'rc529@xt^_a4nl1j0y05btpr_3b+t7lla#a8xryms46phdgi#6'
 DEBUG = False
 ALLOWED_HOSTS = ['abdelrhmanbeseiso.pythonanywhere.com']
 
@@ -105,3 +105,10 @@ import resend
 RESEND_API_KEY = 're_T688dGfy_3pEBNwwsSaEobur8HxfRU6xL'  
 RESEND_FROM_EMAIL ="Abdelrhman Portfolio <onboarding@resend.dev>"  
 RESEND_TO_EMAIL =["delivered@resend.dev"]
+
+SECURE_SSL_REDIRECT = True          # Redirect HTTP → HTTPS
+SESSION_COOKIE_SECURE = True        # Only send session cookies over HTTPS
+CSRF_COOKIE_SECURE = True           # Only send CSRF cookies over HTTPS
+SECURE_HSTS_SECONDS = 31536000      # Enable HSTS (1 year)
+SECURE_HSTS_PRELOAD = True          
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
