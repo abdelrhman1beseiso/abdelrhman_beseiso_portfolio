@@ -49,6 +49,67 @@
             --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
         }
 
+        /* Navy Blue with Orange Theme */
+        [data-theme="navy"] {
+            --primary: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary: #ff8c42;
+            --accent: #ffa726;
+            
+            --bg-primary: #0f1419;
+            --bg-secondary: #1e2a3a;
+            --bg-tertiary: #2c3e50;
+            --bg-card: rgba(255, 107, 53, 0.05);
+            --bg-glass: rgba(255, 107, 53, 0.08);
+            --bg-glass-hover: rgba(255, 107, 53, 0.12);
+            
+            --text-primary: #ffffff;
+            --text-secondary: #b0bec5;
+            --text-muted: #78909c;
+            
+            --border: rgba(255, 107, 53, 0.15);
+            --border-hover: rgba(255, 107, 53, 0.25);
+            --shadow: 0 25px 50px -12px rgba(15, 20, 25, 0.6);
+            --shadow-lg: 0 35px 60px -12px rgba(15, 20, 25, 0.8);
+            --shadow-colored: 0 25px 50px -12px rgba(255, 107, 53, 0.3);
+            
+            --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #ff8c42 50%, #ffa726 100%);
+            --gradient-secondary: linear-gradient(135deg, #ffa726 0%, #ff6b35 100%);
+            --gradient-bg: radial-gradient(ellipse at top, #1e2a3a 0%, #0f1419 100%);
+            --gradient-card: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(255,107,53,0.05) 100%);
+        }
+
+        /* Silver with Black Theme */
+        [data-theme="silver"] {
+            --primary: #2c2c2c;
+            --primary-dark: #1a1a1a;
+            --secondary: #404040;
+            --accent: #666666;
+            
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #e8e8e8;
+            --bg-tertiary: #d4d4d4;
+            --bg-card: rgba(44, 44, 44, 0.05);
+            --bg-glass: rgba(44, 44, 44, 0.08);
+            --bg-glass-hover: rgba(44, 44, 44, 0.12);
+            
+            --text-primary: #1a1a1a;
+            --text-secondary: #404040;
+            --text-muted: #666666;
+            
+            --border: rgba(44, 44, 44, 0.15);
+            --border-hover: rgba(44, 44, 44, 0.25);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+            --shadow-colored: 0 25px 50px -12px rgba(44, 44, 44, 0.3);
+            
+            --gradient-primary: linear-gradient(135deg, #2c2c2c 0%, #404040 50%, #666666 100%);
+            --gradient-secondary: linear-gradient(135deg, #666666 0%, #2c2c2c 100%);
+            --gradient-bg: radial-gradient(ellipse at top, #e8e8e8 0%, #f5f5f5 100%);
+            --gradient-card: linear-gradient(135deg, rgba(44,44,44,0.08) 0%, rgba(44,44,44,0.03) 100%);
+        }
+
+        /* Light Theme (Original) */
         [data-theme="light"] {
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
@@ -106,6 +167,20 @@
             animation: backgroundShift 20s ease-in-out infinite;
         }
 
+        [data-theme="navy"] body::before {
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 140, 66, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 167, 38, 0.05) 0%, transparent 50%);
+        }
+
+        [data-theme="silver"] body::before {
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(44, 44, 44, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(64, 64, 64, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(102, 102, 102, 0.03) 0%, transparent 50%);
+        }
+
         @keyframes backgroundShift {
             0%, 100% { transform: translateX(0) translateY(0); }
             25% { transform: translateX(-20px) translateY(-10px); }
@@ -141,10 +216,34 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        [data-theme="navy"] .navbar {
+            background: rgba(15, 20, 25, 0.7);
+        }
+
+        [data-theme="silver"] .navbar {
+            background: rgba(245, 245, 245, 0.7);
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
         .navbar.scrolled {
             padding: 1rem 0;
             background: rgba(10, 10, 15, 0.95);
             box-shadow: var(--shadow);
+        }
+
+        [data-theme="navy"] .navbar.scrolled {
+            background: rgba(15, 20, 25, 0.95);
+        }
+
+        [data-theme="silver"] .navbar.scrolled {
+            background: rgba(245, 245, 245, 0.95);
+        }
+
+        [data-theme="light"] .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
         }
 
         .nav-container {
@@ -382,6 +481,14 @@
             box-shadow: 0 35px 70px -12px rgba(99, 102, 241, 0.4);
         }
 
+        [data-theme="navy"] .btn-primary:hover {
+            box-shadow: 0 35px 70px -12px rgba(255, 107, 53, 0.4);
+        }
+
+        [data-theme="silver"] .btn-primary:hover {
+            box-shadow: 0 35px 70px -12px rgba(44, 44, 44, 0.4);
+        }
+
         .btn-secondary {
             background: var(--bg-glass);
             color: var(--text-primary);
@@ -531,6 +638,12 @@
         .string { color: #10b981; }
         .comment { color: #6b7280; }
 
+        [data-theme="navy"] .keyword { color: #ff8c42; }
+        [data-theme="navy"] .string { color: #ffa726; }
+
+        [data-theme="silver"] .keyword { color: #404040; }
+        [data-theme="silver"] .string { color: #666666; }
+
         /* Sections */
         .section {
             padding: 8rem 0;
@@ -679,6 +792,16 @@
             100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.6); }
         }
 
+        [data-theme="navy"] @keyframes progressGlow {
+            0% { box-shadow: 0 0 5px rgba(255, 107, 53, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.6); }
+        }
+
+        [data-theme="silver"] @keyframes progressGlow {
+            0% { box-shadow: 0 0 5px rgba(44, 44, 44, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(44, 44, 44, 0.6); }
+        }
+
         .progress-fill {
             height: 100%;
             background: var(--gradient-primary);
@@ -711,6 +834,126 @@
         }
 
         /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .project-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 2.5rem;
+            backdrop-filter: blur(30px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-colored);
+            border-color: var(--border-hover);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-link.primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .project-link.secondary {
+            background: var(--bg-glass);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
         .projects-showcase {
             text-align: center;
             background: var(--gradient-card);
@@ -720,6 +963,7 @@
             backdrop-filter: blur(30px);
             position: relative;
             overflow: hidden;
+            margin-bottom: 4rem;
         }
 
         .projects-showcase::before {
@@ -732,6 +976,14 @@
             background: conic-gradient(from 0deg, transparent, rgba(99, 102, 241, 0.1), transparent);
             animation: rotate 20s linear infinite;
             z-index: -1;
+        }
+
+        [data-theme="navy"] .projects-showcase::before {
+            background: conic-gradient(from 0deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+        }
+
+        [data-theme="silver"] .projects-showcase::before {
+            background: conic-gradient(from 0deg, transparent, rgba(44, 44, 44, 0.1), transparent);
         }
 
         @keyframes rotate {
@@ -928,6 +1180,14 @@
             transform: translateY(-2px);
         }
 
+        [data-theme="navy"] .form-input:focus {
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+        }
+
+        [data-theme="silver"] .form-input:focus {
+            box-shadow: 0 0 0 4px rgba(44, 44, 44, 0.1);
+        }
+
         .form-textarea {
             resize: vertical;
             min-height: 140px;
@@ -987,6 +1247,14 @@
         .floating-contact-btn:hover {
             transform: scale(1.15) rotate(15deg);
             box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.5);
+        }
+
+        [data-theme="navy"] .floating-contact-btn:hover {
+            box-shadow: 0 25px 50px -12px rgba(255, 107, 53, 0.5);
+        }
+
+        [data-theme="silver"] .floating-contact-btn:hover {
+            box-shadow: 0 25px 50px -12px rgba(44, 44, 44, 0.5);
         }
 
         /* Footer */
@@ -1050,6 +1318,10 @@
 
             .section {
                 padding: 5rem 0;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1227,6 +1499,7 @@
                 <h2 class="section-title">Featured <span style="background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent;">Projects</span></h2>
                 <p class="section-subtitle">Explore my latest work, contributions, and innovative solutions that showcase my expertise</p>
             </div>
+            
             <div class="projects-showcase" data-aos="fade-up" data-aos-delay="200">
                 <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 800;">Discover My Work</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem;">Choose your preferred platform to explore my projects, contributions, and professional journey</p>
@@ -1250,6 +1523,134 @@
                     <i class="fab fa-github"></i>
                     Explore GitHub
                 </a>
+            </div>
+
+            <!-- Individual Projects -->
+            <div class="projects-grid" data-aos="fade-up" data-aos-delay="400">
+                <!-- Project 1: Online Shop Simulation -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="project-title">Online Shop Simulation</h3>
+                    </div>
+                    <p class="project-description">
+                        The Online Shop Simulation is an interactive e-commerce platform designed for businesses and entrepreneurs to simulate real-world online shopping operations. It offers a streamlined experience for both sellers and customers, supporting essential features like product management, secure checkout, real-time inventory updates, and sales analytics.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">E-commerce</span>
+                        <span class="tech-tag">Authentication</span>
+                        <span class="tech-tag">Payment System</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AkramAboJbara/Graduation-project.git" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Python Tutorial Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3 class="project-title">Python Tutorial Platform</h3>
+                    </div>
+                    <p class="project-description">
+                        A Django-based Python tutorial platform with two user roles: students can sign up, log in, track progress, and learn through chapter/topic content; admins can manage chapters and topics using Markdown, with full CRUD support. Includes custom authentication, progress tracking, and separate templates for users and admins.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Authentication</span>
+                        <span class="tech-tag">Markdown</span>
+                        <span class="tech-tag">Progress Tracking</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abdelrhman1beseiso/py_tutorial" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Simple Django Board -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="project-title">Simple Django Board</h3>
+                    </div>
+                    <p class="project-description">
+                        A lightweight Django-based discussion board where users can create posts, comment, and engage in threaded discussions, with category browsing and an admin dashboard for content management. Features user-friendly posts, interactive comments, topic categories, and admin dashboard.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Discussion Board</span>
+                        <span class="tech-tag">Comments</span>
+                        <span class="tech-tag">Admin Panel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abdelrhman1beseiso/Simple_Django_Board" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Portfolio Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="project-title">Personal Portfolio</h3>
+                    </div>
+                    <p class="project-description">
+                        Just a portfolio project which you are watching now. A modern, responsive portfolio website showcasing my skills, projects, and professional experience with interactive animations and modern design principles.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                        <span class="tech-tag">Animations</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abdelrhman1beseiso/abdelrhman_beseiso_portfolio" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Laravel Student Portal -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="project-title">Laravel Student Portal</h3>
+                    </div>
+                    <p class="project-description">
+                        A Laravel-based web student portal developed for the Municipality of Gaza (MOG), enabling students to register, enroll in courses, submit and download tasks, while providing teachers with tools to manage students, courses, and assignments through a secure and user-friendly interface.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">File Management</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abdelrhman1beseiso/student-portal" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1380,22 +1781,38 @@
             offset: 100
         });
 
-        // Theme Toggle
+        // Theme Toggle with 3 themes
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
         
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        body.setAttribute('data-theme', currentTheme);
+        const themes = ['dark', 'navy', 'silver'];
+        let currentThemeIndex = parseInt(localStorage.getItem('themeIndex')) || 0;
         
-        if (currentTheme === 'light') {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        // Set initial theme
+        body.setAttribute('data-theme', themes[currentThemeIndex]);
+        updateThemeIcon(themes[currentThemeIndex]);
+        
+        function updateThemeIcon(theme) {
+            switch(theme) {
+                case 'dark':
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                    break;
+                case 'navy':
+                    themeToggle.innerHTML = '<i class="fas fa-anchor"></i>';
+                    break;
+                case 'silver':
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                    break;
+            }
         }
         
         themeToggle.addEventListener('click', () => {
-            const theme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            body.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const newTheme = themes[currentThemeIndex];
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('themeIndex', currentThemeIndex);
+            updateThemeIcon(newTheme);
         });
 
         // Navbar Scroll Effect
